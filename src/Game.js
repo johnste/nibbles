@@ -18,6 +18,10 @@ const WORLD_DIMENSIONS = {
 	height: 832
 };
 
+/**
+ * A snake game!
+ * @constructor
+ */
 export const Game = function(element) {
 	console.log('Game started');
 	this.renderer = PIXI.autoDetectRenderer(WORLD_DIMENSIONS.width, WORLD_DIMENSIONS.height, {
