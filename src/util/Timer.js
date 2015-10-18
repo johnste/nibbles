@@ -1,8 +1,5 @@
 "use strict";
 
-var _ = require('lodash');
-
-
 export const timestamp = function() {
 	if (window.performance && window.performance.now) {
 		return window.performance.now();

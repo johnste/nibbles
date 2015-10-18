@@ -1,11 +1,8 @@
 "use strict";
 
-var Graphics = require('pixi.js').Graphics;
-var Sprite = require('pixi.js').Sprite;
 const _ = require('lodash');
 const Entity = require('./Entity.js').Entity;
 const Throttler = require('../util/Throttler.js').Throttler;
-const timestamp = require('../util/Timer.js').timestamp;
 const snapToGrid = require('../util/utils.js').snapToGrid;
 const Tween = require('../util/Tween.js').Tween;
 

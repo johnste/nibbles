@@ -1,8 +1,5 @@
 "use strict";
 
-var Graphics = require('pixi.js').Graphics;
-var Sprite = require('pixi.js').Sprite;
-const _ = require('lodash');
 const Entity = require('./Entity.js').Entity;
 const Tween = require('../util/Tween.js').Tween;
 

@@ -26,7 +26,7 @@ Player.prototype.addScore = function() {
 
 Player.prototype.resetScore = function() {
 	this.score = 0;
-	this.scoreText.setStyle({fill: "#ffffff"});
+	this.scoreText.style.fill = "#ffffff";
 	this.updateText();
 };
 
@@ -41,7 +41,7 @@ Player.prototype.updateText = function() {
 
 	if (this.score > this.highScore) {
 		this.highScore = this.score;
-		this.scoreText.setStyle({fill: "#fffa4f"});
+		this.scoreText.style.fill = "#fffa4f";
 	}
 
 	this.scoreText.text = `Score: ${this.score}`;

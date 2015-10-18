@@ -5,13 +5,10 @@ const SnakeHead = require('./entities/SnakeHead.js').SnakeHead;
 const Fruit = require('./entities/Fruit.js').Fruit;
 const Wall = require('./entities/Wall.js').Wall;
 const Timer = require('./util/Timer.js').Timer;
-const Throttler = require('./util/Throttler.js').Throttler;
 const utils = require('./util/utils.js');
 const _ = require('lodash');
 const TWEEN = require('tween.js');
 const Player = require('./Player.js').Player;
-const Sprite = require('pixi.js').Sprite;
-const Graphics = require('pixi.js').Graphics;
 
 const WORLD_DIMENSIONS = {
 	width: 832,
@@ -31,8 +28,8 @@ export const Game = function(element) {
 	element.appendChild(this.renderer.view);
 	this.stage = new PIXI.Container();
 
-	this.levelContainer = new PIXI.DisplayObjectContainer();
-	this.interfaceContainer = new PIXI.DisplayObjectContainer();
+	this.levelContainer = new PIXI.Container();
+	this.interfaceContainer = new PIXI.Container();
 	this.stage.addChild(this.levelContainer);
 	this.stage.addChild(this.interfaceContainer);
 
