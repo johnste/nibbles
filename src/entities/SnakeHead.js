@@ -21,13 +21,20 @@ export let SnakeHead = function(options){
 
 	this.moveThrottler = new Throttler(this.speed, () => this.move());
 
-	document.addEventListener('keydown', e => {
+	this.listenToKey = e => {
 		this.changeDirection(e.keyCode);
-	});
+	};
+
+	document.addEventListener('keydown', this.listenToKey);
 };
 
 SnakeHead.prototype = Object.create(SnakeSegment.prototype);
 SnakeHead.prototype.constructor = SnakeHead;
+
+SnakeHead.prototype.remove = function() {
+	document.removeEventListener('keydown', this.listenToKey);
+	SnakeSegment.prototype.remove.call(this);
+};
 
 SnakeHead.prototype.update = function(dt) {
 	this.moveThrottler.update(dt);
