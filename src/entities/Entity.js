@@ -2,7 +2,6 @@
 
 const Graphics = require('pixi.js').Graphics;
 const Sprite = require('pixi.js').Sprite;
-const PIXI = require('pixi.js');
 const _ = require('lodash');
 const snapToGrid = require('../util/utils.js').snapToGrid;
 const Tween = require('../util/Tween.js').Tween;

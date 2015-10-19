@@ -1,8 +1,5 @@
 "use strict";
 
-var Graphics = require('pixi.js').Graphics;
-var Sprite = require('pixi.js').Sprite;
-const _ = require('lodash');
 const SnakeSegment = require('./SnakeSegment.js').SnakeSegment;
 const Throttler = require('../util/Throttler.js').Throttler;
 const Directions = require('../util/directions.js').Directions;
